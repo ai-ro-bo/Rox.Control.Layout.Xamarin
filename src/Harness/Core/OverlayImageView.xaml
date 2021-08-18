@@ -13,7 +13,7 @@
 
         <roxlayout:OverlayLayout Padding="0">
 
-            <Image Source="LeoWanker.png" Aspect="AspectFill" />
+            <Image Source="Sample.png" Aspect="AspectFill" />
 
             <Label Text="Leo Wanker in action!" roxlayout:OverlayLayout.PaddingOverride="20"
                    HorizontalOptions="Center" VerticalOptions="Start"

@@ -142,4 +142,10 @@
       <Name>Rox.Layout.Harness.Xamarin</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Sample.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\layout-icon.png" />
+  </ItemGroup>
 </Project>

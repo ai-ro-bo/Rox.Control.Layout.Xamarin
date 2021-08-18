@@ -11,13 +11,13 @@
         <Frame Padding="16,8,16,8" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" CornerRadius="8" BorderColor="CadetBlue">
             <StackLayout Spacing="0">
                 <Label Text="Welcome to the" HorizontalTextAlignment="Center" />
-                <Label Text="Leo Wanker" TextColor="CadetBlue" FontSize="36" FontAttributes="Bold" HorizontalTextAlignment="Center" />
-                <Label Text="Layouts for Xamarin.Forms" HorizontalTextAlignment="Center" />
+                <Label Text="Rox Layout Control" TextColor="CadetBlue" FontSize="36" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                <Label Text="for Xamarin.Forms" HorizontalTextAlignment="Center" />
             </StackLayout>
         </Frame>
 
         <Frame Padding="0" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="8" BorderColor="Black">
-            <Image Source="LeoWanker2.png" Aspect="AspectFill" />
+            <Image Source="layout-icon.png" Aspect="AspectFill" />
         </Frame>
 
         <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Spacing="8">
