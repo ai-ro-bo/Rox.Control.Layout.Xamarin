@@ -1,0 +1,1 @@
+﻿[assembly: System.Reflection.AssemblyTitle("Rox Layout Harness for Apple")]
