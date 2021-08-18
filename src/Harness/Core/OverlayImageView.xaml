@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Rox.OverlayImageView"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:rox="clr-namespace:Rox"
+             xmlns:roxlayout="clr-namespace:Rox;assembly=Rox.Layout.Control.Xamarin"
+             x:DataType="rox:OverlayImageViewModel"
+             NavigationPage.HasNavigationBar="False"
+             Padding="8"
+             BackgroundColor="LightCyan">
+
+    <Frame Padding="0" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="8" BorderColor="Black">
+
+        <roxlayout:OverlayLayout Padding="0">
+
+            <Image Source="LeoWanker.png" Aspect="AspectFill" />
+
+            <Label Text="Leo Wanker in action!" roxlayout:OverlayLayout.PaddingOverride="20"
+                   HorizontalOptions="Center" VerticalOptions="Start"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   TextColor="AntiqueWhite" FontSize="24" FontAttributes="Bold" />
+
+            <Label Text="SAMPLE"
+                   HorizontalOptions="Center" VerticalOptions="Center"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   Rotation="-25"
+                   TextColor="Red" FontSize="48" FontAttributes="Bold" Opacity="0.3" />
+
+            <Frame Padding="8,4,4,4" roxlayout:OverlayLayout.PaddingOverride="20"
+                   HorizontalOptions="Center" VerticalOptions="End"
+                   CornerRadius="8" BorderColor="Black" BackgroundColor="Aquamarine">
+
+                <StackLayout Orientation="Horizontal" Spacing="8">
+
+                    <Label Text="©1974 Leo Wanker Industries"
+                           HorizontalOptions="Start" VerticalOptions="Center"
+                           HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                           TextColor="Black" FontSize="14" />
+
+                    <Button Text="More Info"
+                            HorizontalOptions="Start" VerticalOptions="Center"
+                            CornerRadius="16" TextColor="Black" FontSize="14"
+                            Command="{x:Binding MoreInformationCommand}" />
+
+                </StackLayout>
+
+            </Frame>
+            
+        </roxlayout:OverlayLayout>
+
+    </Frame>
+
+</ContentPage>

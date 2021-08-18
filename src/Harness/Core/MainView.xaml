@@ -1,24 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage x:Class="Rox.MainView"
              xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:rox="clr-namespace:Rox"
+             x:DataType="rox:MainViewModel"
+             NavigationPage.HasNavigationBar="False">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill" Spacing="8">
+
+        <Frame Padding="16,8,16,8" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" CornerRadius="8" BorderColor="CadetBlue">
+            <StackLayout Spacing="0">
+                <Label Text="Welcome to the" HorizontalTextAlignment="Center" />
+                <Label Text="Leo Wanker" TextColor="CadetBlue" FontSize="36" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                <Label Text="Layouts for Xamarin.Forms" HorizontalTextAlignment="Center" />
+            </StackLayout>
         </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+
+        <Frame Padding="0" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="8" BorderColor="Black">
+            <Image Source="LeoWanker2.png" Aspect="AspectFill" />
+        </Frame>
+
+        <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Spacing="8">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Spacing="8">
+                <Button Text="WrapLayout" Command="{x:Binding WrapLayoutCommand}" BackgroundColor="CadetBlue" />
+                <Button Text="WrapLayout-Alignment" Command="{x:Binding WrapAlignmentCommand}" />
+                <Button Text="WrapLayout-Text" Command="{x:Binding WrapTextCommand}" />
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Spacing="8">
+                <Button Text="OverlayLayout" Command="{x:Binding OverlayLayoutCommand}" BackgroundColor="CadetBlue" />
+                <Button Text="OverlayLayout-Image" Command="{x:Binding OverlayImageCommand}" />
+            </StackLayout>
+        </StackLayout>
+
     </StackLayout>
 
 </ContentPage>

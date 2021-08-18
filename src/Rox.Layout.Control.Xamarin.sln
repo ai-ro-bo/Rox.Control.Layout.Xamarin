@@ -9,9 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rox.Layout.Harness.Xamarin.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rox.Layout.Harness.Xamarin.Apple", "Harness\Apple\Rox.Layout.Harness.Xamarin.Apple.csproj", "{4621E5E4-9E39-452C-935B-0905472FC641}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rox.Layout.Harness.Xamarin.Core", "Harness\Core\Rox.Layout.Harness.Xamarin.Core.csproj", "{8E160BC9-9903-4AB5-BA96-C84D6879B69B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rox.Layout.Harness.Xamarin", "Harness\Core\Rox.Layout.Harness.Xamarin.csproj", "{8E160BC9-9903-4AB5-BA96-C84D6879B69B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rox.Layout.Control.Xamarin", "Control\Core\Rox.Layout.Control.Xamarin.csproj", "{CB3F6094-743E-4EDF-B758-B87354D52AE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rox.Layout.Control.Xamarin", "Control\Core\Rox.Layout.Control.Xamarin.csproj", "{CB3F6094-743E-4EDF-B758-B87354D52AE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

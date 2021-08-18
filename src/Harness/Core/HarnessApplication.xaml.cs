@@ -9,19 +9,12 @@ namespace Rox
         {
             InitializeComponent();
 
-            MainPage = new MainView();
-        }
+            MainView mainView = new MainView();
+            MainViewModel mainViewModel = new MainViewModel(mainView);
+            mainView.BindingContext = mainViewModel;
+            NavigationPage navigationPage = new NavigationPage(mainView);
 
-        protected override void OnStart()
-        {
-        }
-
-        protected override void OnSleep()
-        {
-        }
-
-        protected override void OnResume()
-        {
+            MainPage = navigationPage;
         }
     }
 }

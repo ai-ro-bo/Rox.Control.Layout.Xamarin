@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Rox.OverlayLayoutView"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:rox="clr-namespace:Rox"
+             xmlns:roxlayout="clr-namespace:Rox;assembly=Rox.Layout.Control.Xamarin"
+             x:DataType="rox:OverlayLayoutViewModel"
+             NavigationPage.HasNavigationBar="False"
+             Padding="20"
+             BackgroundColor="LightCoral">
+
+    <roxlayout:OverlayLayout Padding="20">
+
+        <Label Text="Override (0) Fill" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" BackgroundColor="Beige" roxlayout:OverlayLayout.PaddingOverride="0" />
+        <Label Text="Default (20) Fill" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" BackgroundColor="PaleVioletRed" />
+        <Label Text="Override (40) Fill" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" BackgroundColor="LightSkyBlue" roxlayout:OverlayLayout.PaddingOverride="40" />
+        <Label Text="Override (0) Start" HorizontalOptions="Start" VerticalOptions="Start" BackgroundColor="LightGreen" roxlayout:OverlayLayout.PaddingOverride="0" />
+        <Label Text="Default (20) Start" HorizontalOptions="Start" VerticalOptions="Start" BackgroundColor="LightGreen" />
+        <Label Text="Override (40) Start" HorizontalOptions="Start" VerticalOptions="Start" BackgroundColor="LightGreen" roxlayout:OverlayLayout.PaddingOverride="40" />
+        <Label Text="Override (60) Start" HorizontalOptions="Start" VerticalOptions="Start" BackgroundColor="LightGreen" roxlayout:OverlayLayout.PaddingOverride="60" />
+        <Label Text="Override (0) Center" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="LightGreen" roxlayout:OverlayLayout.PaddingOverride="0" />
+        <Label Text="Offset (0,80) Center" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="LightGreen" roxlayout:OverlayLayout.PaddingOverride="0,0,80,80" />
+        <Label Text="Offset (80,0) Center" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="LightGreen" roxlayout:OverlayLayout.PaddingOverride="80,80,0,0" />
+        <Label Text="Override (0) End" HorizontalOptions="End" VerticalOptions="End" BackgroundColor="LightGreen" roxlayout:OverlayLayout.PaddingOverride="0" />
+        <Label Text="Default (20) End" HorizontalOptions="End" VerticalOptions="End" BackgroundColor="LightGreen" />
+        <Label Text="Override (40) End" HorizontalOptions="End" VerticalOptions="End" BackgroundColor="LightGreen" roxlayout:OverlayLayout.PaddingOverride="40" />
+        <Label Text="Override (60) End" HorizontalOptions="End" VerticalOptions="End" BackgroundColor="LightGreen" roxlayout:OverlayLayout.PaddingOverride="60" />
+
+    </roxlayout:OverlayLayout>
+
+</ContentPage>

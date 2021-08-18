@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Rox.WrapTextView"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:rox="clr-namespace:Rox"
+             xmlns:roxlayout="clr-namespace:Rox;assembly=Rox.Layout.Control.Xamarin"
+             x:DataType="rox:WrapTextViewModel"
+             NavigationPage.HasNavigationBar="False"
+             Padding="8"
+             BackgroundColor="LightBlue"
+             Title="WrapLayout - Text">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="PropertyLabel" TargetType="Label">
+                <Setter Property="LineBreakMode" Value="TailTruncation" />
+                <Setter Property="HorizontalTextAlignment" Value="End" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <Style x:Key="PropertyEntry" TargetType="Entry">
+                <Setter Property="HorizontalTextAlignment" Value="End" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="Keyboard" Value="Numeric" />
+                <Setter Property="ClearButtonVisibility" Value="Never" />
+                <Setter Property="IsSpellCheckEnabled" Value="False" />
+                <Setter Property="IsTextPredictionEnabled" Value="False" />
+            </Style>
+
+            <Style x:Key="PropertyPicker" TargetType="Picker">
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <Style x:Key="WrapLayout" TargetType="roxlayout:WrapLayout">
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="Padding" Value="8" />
+                <Setter Property="Orientation" Value="Horizontal" />
+                <Setter Property="OrientationReverse" Value="{x:Binding OrientationReverse}" />
+                <Setter Property="HorizontalContentAlignment" Value="{x:Binding HorizontalContentAlignment}" />
+                <Setter Property="HorizontalSpacing" Value="{x:Binding HorizontalSpacing}" />
+                <Setter Property="VerticalContentAlignment" Value="{x:Binding VerticalContentAlignment}" />
+                <Setter Property="VerticalSpacing" Value="{x:Binding VerticalSpacing}" />
+                <Setter Property="EndParagraphContentAlignment" Value="{x:Binding EndParagraphContentAlignment}" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid RowSpacing="8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Frame Grid.Column="0" Grid.Row="0"
+               Padding="8"
+               CornerRadius="8"
+               BorderColor="Black"
+               BackgroundColor="LightGray">
+
+            <roxlayout:WrapLayout Style="{x:StaticResource WrapLayout}" BackgroundColor="Gold">
+
+                <Label Text="The" BackgroundColor="LightPink" />
+                <Label Text="quick" FontAttributes="Italic" BackgroundColor="LightGreen" />
+                <Label Text="fox" BackgroundColor="Aqua" TextColor="Brown" />
+                <Label Text="god" BackgroundColor="LightPink" />
+                <Label Text="jumped" BackgroundColor="LightGreen" />
+                <Label Text="over" BackgroundColor="LightPink" />
+                <Label Text="the" BackgroundColor="LightGreen" />
+                <Label Text="lazy" BackgroundColor="LightPink" />
+                <Label Text="brown." BackgroundColor="LightGreen" />
+                <Label Text="The" roxlayout:WrapLayout.SpacingOverride="8" BackgroundColor="LightPink" />
+                <Label Text="quick" FontAttributes="Italic" BackgroundColor="LightGreen" />
+                <Label Text="brown" BackgroundColor="Aqua" TextColor="Brown" />
+                <Label Text="fox" BackgroundColor="LightPink" />
+                <Label Text="jumped" BackgroundColor="LightGreen" />
+                <Label Text="over" BackgroundColor="LightPink" />
+                <Label Text="the" BackgroundColor="LightGreen" />
+                <Label Text="lazy" BackgroundColor="LightPink" />
+                <Label Text="dog." BackgroundColor="LightGreen" />
+                <Label Text="The" roxlayout:WrapLayout.SpacingOverride="8" BackgroundColor="LightPink" />
+                <Label Text="lazy" FontAttributes="Italic" BackgroundColor="LightGreen" />
+                <Label Text="fox" BackgroundColor="Aqua" TextColor="Brown" />
+                <Label Text="jumped" BackgroundColor="LightPink" />
+                <Label Text="quick" BackgroundColor="LightGreen" />
+                <Label Text="over" BackgroundColor="LightPink" />
+                <Label Text="the" BackgroundColor="LightGreen" />
+                <Label Text="brown" BackgroundColor="LightPink" />
+                <Label Text="god." BackgroundColor="LightGreen" />
+                <Label Text="Leo" roxlayout:WrapLayout.ForceNewDimension="True" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="Wanker" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="did" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="way" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="better" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="than" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="that" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="and" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="he" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="wasn't" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="even" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="wearing" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="a" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="seatbelt!" FontAttributes="Bold" BackgroundColor="Green" TextColor="LightBlue" />
+                <Label Text="Leo" roxlayout:WrapLayout.ForceNewDimension="True" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="Wanker" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="did" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="way" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="better" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="than" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="that" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="and" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="he" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="wasn't" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="even" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="wearing" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="a" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="seatbelt!" FontAttributes="Bold" BackgroundColor="Green" TextColor="LightBlue" />
+                <Label Text="Leo" roxlayout:WrapLayout.ForceNewDimension="True" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="Wanker" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="did" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="way" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="better" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="than" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="that" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="and" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="he" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="wasn't" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="even" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="wearing" BackgroundColor="HotPink" TextColor="White" />
+                <Label Text="a" BackgroundColor="CadetBlue" TextColor="White" />
+                <Label Text="seatbelt!" FontAttributes="Bold" BackgroundColor="Green" TextColor="LightBlue" />
+
+            </roxlayout:WrapLayout>
+        </Frame>
+
+        <Frame Grid.Column="0" Grid.Row="1"
+               Padding="8"
+               CornerRadius="8"
+               BorderColor="Black"
+               BackgroundColor="White">
+
+            <Grid Grid.Column="0" Grid.Row="1" ColumnSpacing="8" RowSpacing="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="0" Style="{x:StaticResource PropertyLabel}"
+                       Text="HorizontalContentAlignment" />
+                <Picker Grid.Column="1" Grid.Row="0" Style="{x:StaticResource PropertyPicker}"
+                        ItemsSource="{x:Binding LayoutAlignmentList}"
+                        SelectedItem="{x:Binding HorizontalContentAlignment}" />
+
+                <Label Grid.Column="0" Grid.Row="1" Style="{x:StaticResource PropertyLabel}"
+                       Text="VerticalContentAlignment" />
+                <Picker Grid.Column="1" Grid.Row="1" Style="{x:StaticResource PropertyPicker}"
+                        ItemsSource="{x:Binding LayoutAlignmentList}"
+                        SelectedItem="{x:Binding VerticalContentAlignment}" />
+
+                <Label Grid.Column="0" Grid.Row="2" Style="{x:StaticResource PropertyLabel}"
+                       Text="EndParagraphContentAlignment" />
+                <Picker Grid.Column="1" Grid.Row="2" Style="{x:StaticResource PropertyPicker}"
+                        ItemsSource="{x:Binding LayoutAlignmentList}"
+                        SelectedItem="{x:Binding EndParagraphContentAlignment}" />
+
+                <Label Grid.Column="2" Grid.Row="0" Style="{x:StaticResource PropertyLabel}"
+                       Text="HorizontalSpacing" />
+                <Entry Grid.Column="3" Grid.Row="0" Style="{x:StaticResource PropertyEntry}"
+                       Text="{x:Binding HorizontalSpacing}" />
+
+                <Label Grid.Column="2" Grid.Row="1" Style="{x:StaticResource PropertyLabel}"
+                       Text="VerticalSpacing" />
+                <Entry Grid.Column="3" Grid.Row="1" Style="{x:StaticResource PropertyEntry}"
+                       Text="{x:Binding VerticalSpacing}" />
+
+                <Label Grid.Column="2" Grid.Row="2" Style="{x:StaticResource PropertyLabel}"
+                       Text="OrientationReverse" />
+                <Picker Grid.Column="3" Grid.Row="2" Style="{x:StaticResource PropertyPicker}"
+                        ItemsSource="{x:Binding LayoutOrientationReverseList}"
+                        SelectedItem="{x:Binding OrientationReverse}" />
+
+            </Grid>
+        </Frame>
+    </Grid>
+
+</ContentPage>

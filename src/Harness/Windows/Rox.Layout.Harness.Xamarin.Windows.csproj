@@ -160,9 +160,9 @@
       <Project>{cb3f6094-743e-4edf-b758-b87354d52ae5}</Project>
       <Name>Rox.Layout.Control.Xamarin</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Core\Rox.Layout.Harness.Xamarin.Core.csproj">
+    <ProjectReference Include="..\Core\Rox.Layout.Harness.Xamarin.csproj">
       <Project>{8E160BC9-9903-4AB5-BA96-C84D6879B69B}</Project>
-      <Name>Rox.Layout.Harness.Xamarin.Core</Name>
+      <Name>Rox.Layout.Harness.Xamarin</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

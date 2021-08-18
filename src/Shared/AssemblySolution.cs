@@ -1,4 +1,4 @@
-﻿[assembly: System.Reflection.AssemblyProduct("Rox Layout Control")]
+﻿[assembly: System.Reflection.AssemblyProduct("Rox Layout Control for Xamarin.Forms")]
 [assembly: System.Reflection.AssemblyCompany("AiRoBo Software")]
 [assembly: System.Reflection.AssemblyCopyright("©2016-2021 AiRoBo Software")]
 [assembly: System.Reflection.AssemblyDescription("Visit us at https://airobo.software")]

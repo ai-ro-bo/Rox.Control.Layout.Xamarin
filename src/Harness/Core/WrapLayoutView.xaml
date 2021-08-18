@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Rox.WrapLayoutView"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:rox="clr-namespace:Rox"
+             xmlns:roxlayout="clr-namespace:Rox;assembly=Rox.Layout.Control.Xamarin"
+             x:DataType="rox:WrapLayoutViewModel"
+             NavigationPage.HasNavigationBar="False"
+             Padding="8"
+             BackgroundColor="LightBlue"
+             Title="WrapLayout - Properties">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Button" TargetType="Button">
+                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="MinimumHeightRequest" Value="40" />
+                <Setter Property="WidthRequest" Value="40" />
+                <Setter Property="MinimumWidthRequest" Value="40" />
+                <Setter Property="CornerRadius" Value="20" />
+                <Setter Property="BorderWidth" Value="1" />
+            </Style>
+
+            <Style x:Key="HorizontalButton" BaseResourceKey="Button" TargetType="Button">
+                <Setter Property="BorderColor" Value="Green" />
+                <Setter Property="BackgroundColor" Value="LightGreen" />
+            </Style>
+
+            <Style x:Key="VerticalButton" BaseResourceKey="Button" TargetType="Button">
+                <Setter Property="BorderColor" Value="Goldenrod" />
+                <Setter Property="BackgroundColor" Value="LightGoldenrodYellow" />
+            </Style>
+
+            <Style x:Key="PropertyLabel" TargetType="Label">
+                <Setter Property="LineBreakMode" Value="TailTruncation" />
+                <Setter Property="HorizontalTextAlignment" Value="End" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <Style x:Key="HorizontalPropertyLabel" BaseResourceKey="PropertyLabel" TargetType="Label">
+                <Setter Property="BackgroundColor" Value="MintCream" />
+            </Style>
+
+            <Style x:Key="VerticalPropertyLabel" BaseResourceKey="PropertyLabel" TargetType="Label">
+                <Setter Property="BackgroundColor" Value="LightYellow" />
+            </Style>
+
+            <Style x:Key="PropertyEntry" TargetType="Entry">
+                <Setter Property="HorizontalTextAlignment" Value="End" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="Keyboard" Value="Numeric" />
+                <Setter Property="ClearButtonVisibility" Value="Never" />
+                <Setter Property="IsSpellCheckEnabled" Value="False" />
+                <Setter Property="IsTextPredictionEnabled" Value="False" />
+            </Style>
+
+            <Style x:Key="ActualPropertyEntry" BaseResourceKey="PropertyEntry" TargetType="Entry">
+                <Setter Property="IsReadOnly" Value="True" />
+                <Setter Property="IsTabStop" Value="False" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="HorizontalPropertyEntry" BaseResourceKey="ActualPropertyEntry" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="LightGreen" />
+            </Style>
+
+            <Style x:Key="VerticalPropertyEntry" BaseResourceKey="ActualPropertyEntry" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="LightGoldenrodYellow" />
+            </Style>
+
+            <Style x:Key="PropertyPicker" TargetType="Picker">
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <Style x:Key="WrapLayout" TargetType="roxlayout:WrapLayout">
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="OrientationReverse" Value="{x:Binding OrientationReverse}" />
+                <Setter Property="HorizontalContentAlignment" Value="{x:Binding HorizontalContentAlignment}" />
+                <Setter Property="HorizontalSpacing" Value="{x:Binding HorizontalSpacing}" />
+                <Setter Property="VerticalContentAlignment" Value="{x:Binding VerticalContentAlignment}" />
+                <Setter Property="VerticalSpacing" Value="{x:Binding VerticalSpacing}" />
+                <Setter Property="EndParagraphContentAlignment" Value="{x:Binding EndParagraphContentAlignment}" />
+                <Setter Property="ActualAdjustment" Value="{x:Binding ActualAdjustment}" />
+                <Setter Property="StartIndex" Value="{x:Binding StartIndex, Mode=TwoWay}" />
+                <Setter Property="VisibleCount" Value="{x:Binding VisibleCount, Mode=TwoWay}" />
+                <Setter Property="MaximumCount" Value="{x:Binding MaximumCount, Mode=TwoWay}" />
+            </Style>
+
+            <Style x:Key="HorizontalWrapLayout" BaseResourceKey="WrapLayout" TargetType="roxlayout:WrapLayout">
+                <Setter Property="BackgroundColor" Value="MintCream" />
+                <Setter Property="Orientation" Value="Horizontal" />
+            </Style>
+
+            <Style x:Key="VerticalWrapLayout" BaseResourceKey="WrapLayout" TargetType="roxlayout:WrapLayout">
+                <Setter Property="BackgroundColor" Value="LightYellow" />
+                <Setter Property="Orientation" Value="Vertical" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid ColumnSpacing="8" RowSpacing="8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <roxlayout:WrapLayout Grid.Column="0" Grid.Row="0" Style="{x:StaticResource HorizontalWrapLayout}"
+                              ActualStartIndex="{x:Binding HorizontalStartIndex}"
+                              ActualVisibleCount="{x:Binding HorizontalVisibleCount}"
+                              ActualCount="{x:Binding HorizontalActualCount}">
+
+            <Button Text="A" Style="{x:StaticResource HorizontalButton}" />
+            <Button Text="B" Style="{x:StaticResource HorizontalButton}" />
+            <Button Text="C" Style="{x:StaticResource HorizontalButton}" />
+            <Button Text="D" Style="{x:StaticResource HorizontalButton}" />
+            <Button Text="E" Style="{x:StaticResource HorizontalButton}" />
+            <Button Text="F" Style="{x:StaticResource HorizontalButton}" />
+            <Button Text="G" Style="{x:StaticResource HorizontalButton}" />
+            <Button Text="H" Style="{x:StaticResource HorizontalButton}" />
+            <Button Text="I" Style="{x:StaticResource HorizontalButton}" />
+            <Button Text="J" Style="{x:StaticResource HorizontalButton}" />
+            <Button Text="K" Style="{x:StaticResource HorizontalButton}" />
+            <Button Text="L" Style="{x:StaticResource HorizontalButton}" />
+            <Button Text="M" Style="{x:StaticResource HorizontalButton}" />
+
+        </roxlayout:WrapLayout>
+
+        <Grid Grid.Column="0" Grid.Row="1" ColumnSpacing="8" RowSpacing="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <roxlayout:WrapLayout Grid.Column="0" Grid.Row="0" Style="{x:StaticResource VerticalWrapLayout}"
+                                  ActualStartIndex="{x:Binding VerticalStartIndex}"
+                                  ActualVisibleCount="{x:Binding VerticalVisibleCount}"
+                                  ActualCount="{x:Binding VerticalActualCount}">
+
+                <Button Text="N" Style="{x:StaticResource VerticalButton}" />
+                <Button Text="O" Style="{x:StaticResource VerticalButton}" />
+                <Button Text="P" Style="{x:StaticResource VerticalButton}" />
+                <Button Text="Q" Style="{x:StaticResource VerticalButton}" />
+                <Button Text="R" Style="{x:StaticResource VerticalButton}" />
+                <Button Text="S" Style="{x:StaticResource VerticalButton}" />
+                <Button Text="T" Style="{x:StaticResource VerticalButton}" />
+                <Button Text="U" Style="{x:StaticResource VerticalButton}" />
+                <Button Text="V" Style="{x:StaticResource VerticalButton}" />
+                <Button Text="W" Style="{x:StaticResource VerticalButton}" />
+                <Button Text="X" Style="{x:StaticResource VerticalButton}" />
+                <Button Text="Y" Style="{x:StaticResource VerticalButton}" />
+                <Button Text="Z" Style="{x:StaticResource VerticalButton}" />
+
+            </roxlayout:WrapLayout>
+
+            <Frame Grid.Column="1" Grid.Row="0"
+                   Padding="8"
+                   CornerRadius="8"
+                   BorderColor="Black"
+                   BackgroundColor="White">
+                
+                <Grid Grid.Column="0" Grid.Row="1" ColumnSpacing="8" RowSpacing="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0" Style="{x:StaticResource PropertyLabel}"
+                           Text="StartIndex" />
+                    <Entry Grid.Column="1" Grid.Row="0" Style="{x:StaticResource PropertyEntry}"
+                           Text="{x:Binding StartIndex}" />
+
+                    <Label Grid.Column="0" Grid.Row="1" Style="{x:StaticResource PropertyLabel}"
+                           Text="VisibleCount" />
+                    <Entry Grid.Column="1" Grid.Row="1" Style="{x:StaticResource PropertyEntry}"
+                           Text="{x:Binding VisibleCount}" />
+
+                    <Label Grid.Column="0" Grid.Row="2" Style="{x:StaticResource PropertyLabel}"
+                           Text="MaximumCount" />
+                    <Entry Grid.Column="1" Grid.Row="2" Style="{x:StaticResource PropertyEntry}"
+                           Text="{x:Binding MaximumCount}" />
+
+                    <Label Grid.Column="2" Grid.Row="0" Style="{x:StaticResource HorizontalPropertyLabel}"
+                           Text="ActualStartIndex" />
+                    <Entry Grid.Column="3" Grid.Row="0" Style="{x:StaticResource HorizontalPropertyEntry}"
+                           Text="{x:Binding HorizontalStartIndex}" />
+
+                    <Label Grid.Column="2" Grid.Row="1" Style="{x:StaticResource HorizontalPropertyLabel}"
+                           Text="ActualVisibleCount" />
+                    <Entry Grid.Column="3" Grid.Row="1" Style="{x:StaticResource HorizontalPropertyEntry}"
+                           Text="{x:Binding HorizontalVisibleCount}" />
+
+                    <Label Grid.Column="2" Grid.Row="2" Style="{x:StaticResource HorizontalPropertyLabel}"
+                           Text="ActualCount" />
+                    <Entry Grid.Column="3" Grid.Row="2" Style="{x:StaticResource HorizontalPropertyEntry}"
+                           Text="{x:Binding HorizontalActualCount}" />
+
+                    <Label Grid.Column="0" Grid.Row="3" Style="{x:StaticResource VerticalPropertyLabel}"
+                           Text="ActualStartIndex" />
+                    <Entry Grid.Column="1" Grid.Row="3" Style="{x:StaticResource VerticalPropertyEntry}"
+                           Text="{x:Binding VerticalStartIndex}" />
+
+                    <Label Grid.Column="0" Grid.Row="4" Style="{x:StaticResource VerticalPropertyLabel}"
+                           Text="ActualVisibleCount" />
+                    <Entry Grid.Column="1" Grid.Row="4" Style="{x:StaticResource VerticalPropertyEntry}"
+                           Text="{x:Binding VerticalVisibleCount}" />
+
+                    <Label Grid.Column="0" Grid.Row="5" Style="{x:StaticResource VerticalPropertyLabel}"
+                           Text="ActualCount" />
+                    <Entry Grid.Column="1" Grid.Row="5" Style="{x:StaticResource VerticalPropertyEntry}"
+                           Text="{x:Binding VerticalActualCount}" />
+
+                    <Label Grid.Column="0" Grid.Row="6" Style="{x:StaticResource PropertyLabel}"
+                           Text="OrientationReverse" />
+                    <Picker Grid.Column="1" Grid.Row="6" Style="{x:StaticResource PropertyPicker}"
+                            ItemsSource="{x:Binding LayoutOrientationReverseList}"
+                            SelectedItem="{x:Binding OrientationReverse}" />
+
+                    <Label Grid.Column="0" Grid.Row="7" Style="{x:StaticResource PropertyLabel}"
+                           Text="ActualAdjustment" />
+                    <Picker Grid.Column="1" Grid.Row="7" Style="{x:StaticResource PropertyPicker}"
+                            ItemsSource="{x:Binding WrapActualAdjustmentList}"
+                            SelectedItem="{x:Binding ActualAdjustment}" />
+
+                    <Label Grid.Column="2" Grid.Row="3" Style="{x:StaticResource PropertyLabel}"
+                           Text="HorizontalContentAlignment" />
+                    <Picker Grid.Column="3" Grid.Row="3" Style="{x:StaticResource PropertyPicker}"
+                            ItemsSource="{x:Binding LayoutAlignmentList}"
+                            SelectedItem="{x:Binding HorizontalContentAlignment}" />
+
+                    <Label Grid.Column="2" Grid.Row="4" Style="{x:StaticResource PropertyLabel}"
+                           Text="HorizontalSpacing" />
+                    <Entry Grid.Column="3" Grid.Row="4" Style="{x:StaticResource PropertyEntry}"
+                           Text="{x:Binding HorizontalSpacing}" />
+
+                    <Label Grid.Column="2" Grid.Row="5" Style="{x:StaticResource PropertyLabel}"
+                           Text="VerticalContentAlignment" />
+                    <Picker Grid.Column="3" Grid.Row="5" Style="{x:StaticResource PropertyPicker}"
+                            ItemsSource="{x:Binding LayoutAlignmentList}"
+                            SelectedItem="{x:Binding VerticalContentAlignment}" />
+
+                    <Label Grid.Column="2" Grid.Row="6" Style="{x:StaticResource PropertyLabel}"
+                           Text="VerticalSpacing" />
+                    <Entry Grid.Column="3" Grid.Row="6" Style="{x:StaticResource PropertyEntry}"
+                           Text="{x:Binding VerticalSpacing}" />
+
+                    <Label Grid.Column="2" Grid.Row="7" Style="{x:StaticResource PropertyLabel}"
+                           Text="EndParagraphContentAlignment" />
+                    <Picker Grid.Column="3" Grid.Row="7" Style="{x:StaticResource PropertyPicker}"
+                            ItemsSource="{x:Binding LayoutAlignmentList}"
+                            SelectedItem="{x:Binding EndParagraphContentAlignment}" />
+                </Grid>
+            </Frame>
+        </Grid>
+    </Grid>
+
+</ContentPage>
