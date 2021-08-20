@@ -101,7 +101,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="layout-icon.png" />
+    <Resource Include="layout_icon.png" />
     <Resource Include="Sample.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

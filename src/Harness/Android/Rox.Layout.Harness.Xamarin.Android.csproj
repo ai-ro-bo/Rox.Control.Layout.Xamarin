@@ -103,7 +103,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\layout-icon.png" />
+    <AndroidResource Include="Resources\drawable\layout_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Sample.png" />

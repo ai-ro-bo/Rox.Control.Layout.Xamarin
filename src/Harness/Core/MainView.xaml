@@ -17,7 +17,7 @@
         </Frame>
 
         <Frame Padding="0" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="8" BorderColor="Black">
-            <Image Source="layout-icon.png" Aspect="AspectFill" />
+            <Image Source="layout_icon.png" Aspect="AspectFill" />
         </Frame>
 
         <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Spacing="8">

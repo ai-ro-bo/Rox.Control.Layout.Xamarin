@@ -146,6 +146,6 @@
     <BundleResource Include="Resources\Sample.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\layout-icon.png" />
+    <BundleResource Include="Resources\layout_icon.png" />
   </ItemGroup>
 </Project>
